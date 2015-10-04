@@ -1,7 +1,8 @@
 #include "life.h"
-#include <iostream>
-#include <thread>
+#include <atomic>
 #include <chrono>
+#include <thread>
+#include <iostream>
 #include <functional>
 #include <string.h>
 using namespace std;
