@@ -1,0 +1,15 @@
+<button id="start">Start game</button>
+
+<script type="text/javascript">
+(function(window, document) {
+  var button = document.querySelector('button#start');
+  button.addEventListener('click', function() {
+    $.ajax('/api', {
+      type: 'POST',
+      success: function(response) {
+         window.location = '/' + response.id;
+      }
+    });
+  });
+})(window, document);
+</script>

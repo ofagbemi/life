@@ -1,0 +1,41 @@
+html { height: 100%; }
+body {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 200;
+}
+body.hide {
+  opacity: 0;
+}
+canvas#main {
+  border: solid 1px rgba(0, 0, 0, 0.05);
+}
+button {
+  padding: 11px 24px;
+  background-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: solid 1px black;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+button:hover {
+  color: white;
+  background-color: #2596D8;
+  border-color: transparent;
+}
+p#instructions {
+  transition: opacity 400ms;
+}
+p#instructions.hide {
+  opacity: 0;
+}
+.error {
+  color: #dc4040;
+}

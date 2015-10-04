@@ -1,0 +1,6 @@
+node_modules/
+bin/*
+!bin/src/
+.env
+npm-debug.log
+.DS_Store
