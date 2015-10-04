@@ -59,7 +59,7 @@ string Life::map_to_json(map<long, map<long, bool> >* m, string existsKey) {
   size_t len = json.size();
   for (auto &ent1 : *m) {
     json += ("\"" + to_string(ent1.first) + "\":{");
-    int json_size = json.size();
+    size_t json_size = json.size();
     for (auto &ent2 : ent1.second) {
       json += "\"" + to_string(ent2.first) + "\":" + existsKey + ",";
     }
