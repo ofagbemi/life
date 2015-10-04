@@ -1,6 +1,6 @@
 CXX=g++
 
-FLAGS=-g -Wall -std=c++11 -Ofast
+FLAGS=-g -Wall -pthread -std=c++11 -Ofast
 BIN_PATH=bin/life
 SRC_PATH=bin/src/life.cc
 
