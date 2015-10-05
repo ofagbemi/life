@@ -172,7 +172,7 @@ void Life::step() {
 
 void timer(
   function<void(Life*)> exit_fn, Life* life,
-  atomic<bool>* shouldClose, unsigned int interval) {
+  atomic<bool>* shouldClose, unsigned long interval) {
 
   thread([exit_fn, life, shouldClose, interval]() {
     while (true) {
@@ -195,7 +195,7 @@ int main(int argc, char* argv[]) {
   atomic<bool> shouldClose(false);
   Life* life = new Life();
 
-  timer(exit_fn, life, &shouldClose, 10000);
+  timer(exit_fn, life, &shouldClose, 600000);
 
   for (string s; getline(cin, s);) {
     shouldClose = false;
