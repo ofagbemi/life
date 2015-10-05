@@ -8,3 +8,7 @@ all: life
 
 life: $(SRC_PATH)
 	$(CXX) $(FLAGS) $(SRC_PATH) -o $(BIN_PATH)
+
+clean:
+	-rm bin/life
+	-rm -rf life.dSYM
