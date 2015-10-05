@@ -4,6 +4,8 @@ FLAGS=-g -Wall -pthread -std=c++11 -Ofast
 BIN_PATH=bin/life
 SRC_PATH=bin/src/life.cc
 
+.PHONY: all clean
+
 all: life
 
 life: $(SRC_PATH)
