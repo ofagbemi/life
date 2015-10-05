@@ -10,6 +10,7 @@ class Life {
 
   public:
     Life();
+    ~Life();
     void step();
     void add_points(std::string);
     void set_living(long, long);

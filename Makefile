@@ -1,15 +1,16 @@
 CXX=g++
 
 FLAGS=-g -Wall -pthread -std=c++11 -Ofast
+
+SRC_FILES=bin/src/main.cc bin/src/life.cc
 BIN_PATH=bin/life
-SRC_PATH=bin/src/life.cc
 
 .PHONY: all clean
 
 all: life
 
-life: $(SRC_PATH)
-	$(CXX) $(FLAGS) $(SRC_PATH) -o $(BIN_PATH)
+life: $(SRC_FILES)
+	$(CXX) $(FLAGS) $(SRC_FILES) -o $(BIN_PATH)
 
 clean:
 	-rm bin/life
