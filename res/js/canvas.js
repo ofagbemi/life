@@ -107,7 +107,9 @@
   Canvas.prototype.loop = function() {
     this.context.fillStyle = Canvas._getHexColor(
       Math.floor(Math.random() * 16777216));
-    setTimeout(this.load(this.loop.bind(this)).bind(this), 0);
+    setTimeout(function() {
+      this.load( this.loop.bind(this) );
+    }.bind(this));
   };
 
   Canvas.prototype.getPixelFromEvent = function(e) {
